@@ -1,0 +1,14 @@
+{
+  "name": "fx_coating_site",
+  "version": "1.0.0",
+  "description": "Responsive website build for FX Coating Inc.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Jessy Vander Vaart",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
