@@ -137,4 +137,5 @@ body {
 
 #navBar {
   display: flex;
-  color: red; }
+  color: red;
+  background-color: red; }

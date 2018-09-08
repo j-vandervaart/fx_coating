@@ -4,4 +4,7 @@
     <div id="hamburg"></div>
 </div>
 <div id="slidingMenu">
+    <a href="agricultural">ag</a>
+    <a href="industrial">in</a>
+    <a href="commercial">co</a>
 </div>
