@@ -27,6 +27,7 @@
 
   // Variables
   var hamburg = document.querySelector(".hamburg");
+  var hamburgBlock = document.querySelectorAll(".hamburgBlock");
   var slidingMenu = document.querySelector(".slidingMenu");
   var mainLi = document.querySelectorAll(".mainLi");
   var test = document.querySelector("#test");
@@ -34,6 +35,10 @@
   // Functions
   function slideMenu() {
     slidingMenu.classList.toggle("slideOpen");
+    hamburg.classList.toggle("hamChange");
+    for (var i = 0; i < hamburgBlock.length; i++) {
+      hamburgBlock[i].classList.toggle("hamBlockChange");
+    }
   }
 
   function scrollTo(e) {
