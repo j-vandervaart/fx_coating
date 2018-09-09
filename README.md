@@ -1,3 +1,3 @@
 # FX Coating Website Build
 
-This is a project built for a local business.
+This is a project build for a local business.

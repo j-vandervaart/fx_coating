@@ -48,7 +48,11 @@
       scrollTo: aValue,
       ease: Power2.easeOut
     });
-    console.log("done");
+    slidingMenu.classList.remove("slideOpen");
+    hamburg.classList.remove("hamChange");
+    for (var i = 0; i < hamburgBlock.length; i++) {
+      hamburgBlock[i].classList.remove("hamBlockChange");
+    }
   }
 
   // Event Listeners
