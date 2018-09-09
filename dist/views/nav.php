@@ -1,6 +1,9 @@
 <div id="navBar">
     <img src="./images/logo.png" alt="FX Coating Logo" id="logoImg">
-    <div id="callInfo"></div>
+    <div id="callInfo">
+        <p id="call">Call us today!</p>
+        <p id="number">1.888.828.3780</p>
+    </div>
     <div class="hamburg">
         <div class="hamburgBlock"></div>
         <div class="hamburgBlock"></div>
