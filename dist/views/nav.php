@@ -22,6 +22,6 @@
             <a href="industrial"><li class="secondaryLi">Industrial</li></a>
         </ul>
         <li class="mainLi">Gallery</li>
-        <li class="mainLi">Contact Us</li>
+        <li class="mainLi">Contact</li>
     </ul>
 </nav>
