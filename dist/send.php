@@ -15,8 +15,8 @@
 			$msg = "Please use a valid email";
 			echo $msg;
 		}else {
-			$toEmail = 'jvand223@gmail.com';
-			$subject = 'Project Quote'.$name;
+			$toEmail = 'rick@fxcoating.ca';
+			$subject = 'Project Quote for '.$name;
 			$body = '<h4>Name:</h4><p>'.$name.'</p>
 			<h4>Email Address:</h4><p>'.$email.'</p>
 			<h4>Phone Number:</h4><p>'.$phone.'</p>

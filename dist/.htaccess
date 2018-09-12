@@ -2,3 +2,7 @@ RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteRule ^(.*)$ index.php?pg=$1
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|svg|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>

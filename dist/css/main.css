@@ -122,6 +122,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "Alte Hass Grotesk Bold";
+  src: url("../fonts/altehaasgroteskbold-webfont.woff2") format("woff2"), url("../fonts/altehaasgroteskbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Alte Hass Grotesk";
+  src: url("../fonts/altehaasgroteskregular-webfont.woff2") format("woff2"), url("../fonts/altehaasgroteskregular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -150,11 +162,13 @@ a {
     .container {
       width: 70%; } }
 
+.none {
+  display: none; }
+
 .mainHdg {
-  font-family: "Alte Haas Grotesk";
+  font-family: "Alte Hass Grotesk", sans-serif;
   color: #0f3748;
   text-transform: uppercase;
-  font-weight: 400;
   font-size: 28px;
   padding-top: 6vh;
   line-height: 36px; }
@@ -164,15 +178,30 @@ a {
   @media screen and (min-width: 1025px) {
     .mainHdg {
       padding-top: 8vh; } }
+  @media screen and (min-width: 1920px) {
+    .mainHdg {
+      font-size: 42px; } }
+  @media screen and (min-width: 2400px) {
+    .mainHdg {
+      font-size: 56px; } }
 
 .mainHdg span {
-  font-weight: 800; }
+  font-family: "Alte Hass Grotesk Bold", sans-serif; }
 
 .mainP {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   margin-top: 2vh;
-  line-height: 30px; }
+  line-height: 30px;
+  font-weight: 300; }
+  @media screen and (min-width: 1920px) {
+    .mainP {
+      font-size: 20px;
+      line-height: 34px; } }
+  @media screen and (min-width: 2400px) {
+    .mainP {
+      font-size: 28px;
+      line-height: 44px; } }
 
 #navBar {
   box-sizing: border-box;
@@ -193,6 +222,12 @@ a {
   @media screen and (min-width: 1025px) {
     #logoImg {
       margin-left: 15%; } }
+  @media screen and (min-width: 1920px) {
+    #logoImg {
+      height: 60px; } }
+  @media screen and (min-width: 2400px) {
+    #logoImg {
+      height: 80px; } }
 
 #callInfo {
   display: none;
@@ -203,16 +238,30 @@ a {
 
 #callInfo #call {
   text-align: right;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #000;
   margin-bottom: 5px; }
+  @media screen and (min-width: 1920px) {
+    #callInfo #call {
+      font-size: 22px;
+      margin-bottom: 10px; } }
+  @media screen and (min-width: 2400px) {
+    #callInfo #call {
+      font-size: 30px;
+      margin-bottom: 15px; } }
 
 #callInfo #number {
-  font-family: "Segoe UI";
+  font-family: "Roboto", sans-serif;
   color: #0f3748;
   font-size: 28px;
   font-weight: 700; }
+  @media screen and (min-width: 1920px) {
+    #callInfo #number {
+      font-size: 32px; } }
+  @media screen and (min-width: 2400px) {
+    #callInfo #number {
+      font-size: 40px; } }
 
 .hamburg {
   position: fixed;
@@ -311,7 +360,7 @@ a {
 
 .mainLi {
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #e6e6e6;
   font-size: 20px;
   text-transform: uppercase;
@@ -327,12 +376,15 @@ a {
       border: none;
       padding: 0;
       font-size: 14px; } }
+  @media screen and (min-width: 1920px) {
+    .mainLi {
+      font-size: 22px; } }
+  @media screen and (min-width: 2400px) {
+    .mainLi {
+      font-size: 26px; } }
 
 .mainLi:hover {
   color: #acacac; }
-
-.mainLi:last-child {
-  border-bottom: none; }
 
 #secondaryUl {
   box-sizing: border-box;
@@ -349,7 +401,7 @@ a {
       display: none; } }
 
 .secondaryLi {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #e6e6e6;
   font-size: 16px;
   text-transform: uppercase;
@@ -385,6 +437,12 @@ a {
   @media screen and (min-width: 1025px) {
     #home {
       height: 83vh; } }
+  @media screen and (min-width: 1920px) {
+    #home {
+      min-height: 800px; } }
+  @media screen and (min-width: 2400px) {
+    #home {
+      min-height: 1000px; } }
 
 #protectDiv {
   width: 90%;
@@ -402,12 +460,19 @@ a {
       margin-left: 15%;
       padding: 2%;
       min-height: 500px; } }
+  @media screen and (min-width: 1920px) {
+    #protectDiv {
+      min-height: 700px;
+      width: 650px; } }
+  @media screen and (min-width: 2400px) {
+    #protectDiv {
+      min-height: 900px;
+      width: 850px; } }
 
 #protectDiv h1 {
   width: 60%;
   text-transform: uppercase;
-  font-family: "Alte Haas Grotesk";
-  font-weight: 800;
+  font-family: "Alte Hass Grotesk Bold", sans-serif;
   color: #fff;
   font-size: 40px;
   line-height: 50px; }
@@ -420,14 +485,21 @@ a {
       width: 40%;
       font-size: 45px;
       line-height: 55px; } }
+  @media screen and (min-width: 1920px) {
+    #protectDiv h1 {
+      font-size: 60px;
+      line-height: 75px; } }
+  @media screen and (min-width: 2400px) {
+    #protectDiv h1 {
+      font-size: 75px;
+      line-height: 90px; } }
 
 #protectDiv span {
-  text-transform: lowercase;
-  font-weight: 400; }
+  text-transform: lowercase; }
 
 #protectDiv h2 {
   color: #fff;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   margin-top: 30px;
   line-height: 40px;
   font-size: 20px;
@@ -441,11 +513,19 @@ a {
       line-height: 40px;
       font-size: 20px;
       width: 100%; } }
+  @media screen and (min-width: 1920px) {
+    #protectDiv h2 {
+      font-size: 32px;
+      line-height: 45px; } }
+  @media screen and (min-width: 2400px) {
+    #protectDiv h2 {
+      font-size: 42px;
+      line-height: 54px; } }
 
 #protectDiv p {
   display: none;
   color: #fff;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   margin-top: 15px;
   line-height: 35px;
   font-size: 16px; }
@@ -462,6 +542,13 @@ a {
       margin-top: 15px;
       line-height: 35px;
       font-size: 16px; } }
+  @media screen and (min-width: 1920px) {
+    #protectDiv p {
+      font-size: 22px; } }
+  @media screen and (min-width: 2400px) {
+    #protectDiv p {
+      font-size: 30px;
+      line-height: 45px; } }
 
 #about {
   padding-bottom: 6vh; }
@@ -491,22 +578,40 @@ a {
 
 #about h2 {
   color: #fff;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   position: absolute;
   top: 18%;
   padding-left: 8%;
   padding-right: 8%;
   text-transform: uppercase;
   font-size: 24px; }
+  @media screen and (min-width: 1920px) {
+    #about h2 {
+      font-size: 36px; } }
+  @media screen and (min-width: 2400px) {
+    #about h2 {
+      font-size: 46px; } }
 
-#about #polygonP {
+#about .polygonP {
   color: #fff;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   position: absolute;
   top: 45%;
   padding-left: 8%;
   padding-right: 8%;
-  line-height: 30px; }
+  line-height: 30px;
+  font-size: 16px; }
+  @media screen and (min-width: 768px) {
+    #about .polygonP {
+      font-size: 18px; } }
+  @media screen and (min-width: 1920px) {
+    #about .polygonP {
+      font-size: 24px;
+      line-height: 38px; } }
+  @media screen and (min-width: 2400px) {
+    #about .polygonP {
+      font-size: 34px;
+      line-height: 52px; } }
 
 #about hr {
   border: 0;
@@ -517,10 +622,17 @@ a {
 
 #about #leader {
   color: #0f3748;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   margin-top: 3vh;
   line-height: 36px; }
+  @media screen and (min-width: 1920px) {
+    #about #leader {
+      font-size: 30px;
+      line-height: 42px; } }
+  @media screen and (min-width: 2400px) {
+    #about #leader {
+      font-size: 36px; } }
 
 #products {
   background-color: #fff; }
@@ -561,12 +673,18 @@ a {
       padding-left: 5%; } }
 
 #evaluation h3 {
-  font-family: "Alte Haas Grotesk";
+  font-family: "Alte Hass Grotesk", sans-serif;
   color: #0f3748;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.05rem;
   margin-top: 3vh; }
+  @media screen and (min-width: 1920px) {
+    #evaluation h3 {
+      font-size: 28px; } }
+  @media screen and (min-width: 2400px) {
+    #evaluation h3 {
+      font-size: 36px; } }
 
 #applications {
   background-color: #fff; }
@@ -595,7 +713,8 @@ a {
   @media screen and (min-width: 768px) {
     #appsAg div {
       flex-grow: 1;
-      height: auto; } }
+      height: auto;
+      min-height: 250px; } }
 
 #appsCom {
   width: 100%; }
@@ -610,7 +729,8 @@ a {
   min-height: 160px; }
   @media screen and (min-width: 768px) {
     #appsCom div {
-      height: 18vh; } }
+      height: 18vh;
+      min-height: 250px; } }
   @media screen and (min-width: 1025px) {
     #appsCom div {
       height: 33vh; } }
@@ -642,7 +762,7 @@ a {
   width: 80%;
   font-size: 22px;
   padding: 10px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   background-color: #fff;
   text-align: center;
@@ -651,8 +771,16 @@ a {
   @media screen and (min-width: 1025px) {
     .appName {
       width: 60%; } }
+  @media screen and (min-width: 1920px) {
+    .appName {
+      font-size: 28px;
+      padding: 20px; } }
+  @media screen and (min-width: 2400px) {
+    .appName {
+      font-size: 36px; } }
 
 #gallery {
+  display: none;
   background-color: #fff;
   padding-bottom: 6vh; }
   @media screen and (min-width: 1025px) {
@@ -692,6 +820,9 @@ a {
   width: auto;
   height: 80px;
   transition: height 0.6s ease; }
+  @media screen and (min-width: 1920px) {
+    .gallButton {
+      height: 120px; } }
 
 #gallDesc {
   width: 100%; }
@@ -700,6 +831,7 @@ a {
   height: 90px; }
 
 #quote {
+  padding-top: 6vh;
   background-color: #fff;
   padding-bottom: 6vh; }
 
@@ -718,10 +850,15 @@ a {
 
 #quote h1 {
   width: 100%;
-  font-family: "Alte Haas Grotesk";
+  font-family: "Alte Hass Grotesk", sans-serif;
   color: #e3e3e3;
-  font-weight: 400;
   font-size: 28px; }
+  @media screen and (min-width: 1920px) {
+    #quote h1 {
+      font-size: 32px; } }
+  @media screen and (min-width: 2400px) {
+    #quote h1 {
+      font-size: 44px; } }
 
 #quote hr {
   width: 100%;
@@ -751,12 +888,20 @@ form {
 
 label {
   display: block;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #e3e3e3;
   text-transform: uppercase;
   margin-top: 25px;
   margin-bottom: 12px; }
+  @media screen and (min-width: 1920px) {
+    label {
+      font-size: 20px;
+      margin-top: 35px;
+      margin-bottom: 22px; } }
+  @media screen and (min-width: 2400px) {
+    label {
+      font-size: 26px; } }
 
 input[type="text"] {
   display: block;
@@ -769,20 +914,29 @@ textarea {
   width: 99%;
   background-color: #e3e3e3;
   border: none;
-  flex-grow: 1;
-  height: auto; }
+  height: 150px; }
+  @media screen and (min-width: 768px) {
+    textarea {
+      flex-grow: 1;
+      height: auto; } }
 
 input[type="submit"] {
   display: block;
   width: 100%;
   background-color: #898989;
-  height: 30px;
   border: none;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-top: 25px;
   font-size: 17px;
-  transition: background-color 0.6s ease, color 0.6s ease; }
+  transition: background-color 0.6s ease, color 0.6s ease;
+  padding: 10px; }
+  @media screen and (min-width: 1920px) {
+    input[type="submit"] {
+      font-size: 22px; } }
+  @media screen and (min-width: 2400px) {
+    input[type="submit"] {
+      font-size: 28px; } }
 
 input[type="submit"]:hover {
   background-color: #000;
@@ -803,37 +957,156 @@ input[type="submit"]:hover {
 .contentBreakdown {
   width: 45%;
   margin: 20px auto; }
+  @media screen and (min-width: 1920px) {
+    .contentBreakdown {
+      margin: 40px auto; } }
 
 .contentBreakdown h4 {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px; }
+  @media screen and (min-width: 1920px) {
+    .contentBreakdown h4 {
+      font-size: 26px; } }
+  @media screen and (min-width: 2400px) {
+    .contentBreakdown h4 {
+      font-size: 36px; } }
 
 .contentBreakdown p {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   color: #0f3748;
   font-weight: 500; }
+  @media screen and (min-width: 1920px) {
+    .contentBreakdown p {
+      font-size: 26px; } }
+  @media screen and (min-width: 2400px) {
+    .contentBreakdown p {
+      font-size: 36px; } }
 
 .contentBreakdown a {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #0f3748;
   font-weight: 500;
   text-decoration: underline; }
+  @media screen and (min-width: 1920px) {
+    .contentBreakdown a {
+      font-size: 26px; } }
+  @media screen and (min-width: 2400px) {
+    .contentBreakdown a {
+      font-size: 36px; } }
 
 #map {
   width: 100%;
   height: 400px;
   margin-top: 20px;
   margin-bottom: 6vh; }
+  @media screen and (min-width: 1025px) {
+    #map {
+      height: 450px; } }
+  @media screen and (min-width: 2400px) {
+    #map {
+      height: 700px; } }
 
 .firstHeading {
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 5px; }
+  @media screen and (min-width: 1920px) {
+    .firstHeading {
+      font-size: 30px; } }
+  @media screen and (min-width: 2400px) {
+    .firstHeading {
+      font-size: 36px; } }
+
+@media screen and (min-width: 1920px) {
+  #bodyContent p {
+    font-size: 20px; } }
+
+@media screen and (min-width: 2400px) {
+  #bodyContent p {
+    font-size: 26px; } }
 
 .alert {
   padding: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   height: 0;
   transition: all 1s ease; }
+
+.subHr {
+  border: 0;
+  height: 1px;
+  background-color: #0f3748;
+  opacity: 0.2;
+  margin-top: 3vh; }
+
+.subHdg {
+  font-family: "Alte Hass Grotesk Bold", sans-serif;
+  color: #0f3748;
+  font-size: 24px;
+  margin-top: 3vh;
+  line-height: 30px; }
+  @media screen and (min-width: 1920px) {
+    .subHdg {
+      font-size: 28px; } }
+  @media screen and (min-width: 2400px) {
+    .subHdg {
+      font-size: 36px; } }
+
+.subHdgClose {
+  font-family: "Roboto", sans-serif;
+  color: #0f3748;
+  font-size: 24px;
+  margin-top: 3vh;
+  line-height: 40px; }
+  @media screen and (min-width: 1920px) {
+    .subHdgClose {
+      font-size: 28px; } }
+  @media screen and (min-width: 2400px) {
+    .subHdgClose {
+      font-size: 36px; } }
+
+.appBreakdown {
+  padding-bottom: 6vh; }
+
+footer {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+footer h3 {
+  color: #898989;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 20px; }
+
+footer p {
+  color: #898989;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  font-size: 13px;
+  line-height: 25px; }
+
+footer a {
+  text-decoration: underline;
+  color: #898989; }
+
+.appBreakdown ul {
+  list-style-type: square;
+  list-style-position: inside;
+  color: red; }
+
+.appBreakdown li {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin-top: 15px;
+  line-height: 30px;
+  color: #0f3748;
+  font-weight: 600; }

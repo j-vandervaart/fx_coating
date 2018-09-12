@@ -1,4 +1,5 @@
 <section id="home">
+    <h1 class="none">Home</h1>
     <div id="protectDiv">
         <h1>Protect <span>and</span> Beautify.</h1>
         <h2>FX Coating Systems protect and beautify a wide range of agricultural, commercial, and industrial surfaces with advanced coating options. </h2>
@@ -19,7 +20,7 @@
                     <img src="./images/chain_mobile.png" alt="Durable">
                 </picture>
                 <h2>Durable</h2>
-                <p id="polygonP">Durable even in industrial, warehouse, and manufacturing settings.</p>
+                <p class="polygonP">Durable even in industrial, warehouse, and manufacturing settings.</p>
             </div>
             <div class="polygonInd">
                 <picture>
@@ -27,7 +28,7 @@
                     <img src="./images/hardhat_mobile.png" alt="Safe">
                 </picture>
                 <h2>Safe</h2>
-                <p id="polygonP">We offer non-skid and slip-resistant surface coatings.</p>
+                <p class="polygonP">We offer non-skid and slip-resistant surface coatings.</p>
             </div>
             <div class="polygonInd">
                 <picture>
@@ -35,7 +36,7 @@
                     <img src="./images/welder_mobile.png" alt="Resistant">
                 </picture>
                 <h2>Resistant</h2>
-                <p id="polygonP">Our coatings are available in chemical, stain, and water resistant applications.</p>
+                <p class="polygonP">Our coatings are available in chemical, stain, and water resistant applications.</p>
             </div>
             <div class="polygonInd">
                 <picture>
@@ -43,7 +44,7 @@
                     <img src="./images/barn_mobile.png" alt="Multifaceted">
                 </picture>
                 <h2>Multifaceted</h2>
-                <p id="polygonP">FX Coating offers interior, exterior, and underwater coatings.</p>
+                <p class="polygonP">FX Coating offers interior, exterior, and underwater coatings.</p>
             </div>
         </div>
     </div> 
@@ -70,23 +71,23 @@
 </section>
 <section id="applications">
     <div class="container">
-        <div class="mainHdg"><span>Applications</span></div>
+        <h1 class="mainHdg"><span>Applications</span></h1>
         <p class="mainP">Click on the images to read more about each application.</p>
         <div id="appsMain">
             <div id="appsAg">
-                <a href="agricultural">
+                <a href="/agricultural">
                     <div class="appImgDiv" id="ag">
                         <p class="appName">Agricultural</p>
                     </div>
                 </a>
             </div>
             <div id="appsCom">
-                <a href="commercial">
+                <a href="/commercial">
                     <div class="appImgDiv" id="com">
                         <p class="appName">Commercial</p>
                     </div>
                 </a>
-                <a href="industrial">
+                <a href="/industrial">
                     <div class="appImgDiv" id="indust">
                         <p class="appName">Industrial</p>
                     </div>
@@ -159,7 +160,6 @@
                 </div>
             </div>
 
-            <div id="map">
             <div id="map"></div>
                 <script>
                 var map;
@@ -168,12 +168,6 @@
                     center: {lat: 43.00717048507984, lng:-81.81145445602745},
                     zoom: 9
                     });
-
-                    // var marker = new google.maps.Marker({
-                    //     position: {lat: 43.00717048507984, lng:-81.81145445602745},
-                    //     map: map,
-                    //     title: 'Hello World!'
-                    // })
 
                     var contentString = '<div id="content">'+
                     '<div id="siteNotice">'+
@@ -200,8 +194,6 @@
                 </script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4XMMKia7dVi2UNNqfwaMtEafE7w6_nbU&callback=initMap"
                 async defer></script>
-            </div>
-
         </div>
     </div>
 </section>

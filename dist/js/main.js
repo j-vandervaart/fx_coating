@@ -1,29 +1,6 @@
 (function() {
   "use strict";
-  console.log("SEAF Fired");
-
-  window.addEventListener("load", function() {
-    var urlCheck = window.location.href.slice(38);
-    if (
-      urlCheck == "agricultural" ||
-      urlCheck == "commercial" ||
-      urlCheck == "industrial"
-    ) {
-      for (var i = 0; i < mainLi.length; i++) {
-        var aValue = "#" + mainLi[i].innerHTML.toLowerCase();
-        var parent = mainLi[i].parentNode;
-        var wrapper = document.createElement("a");
-
-        parent.replaceChild(wrapper, mainLi[i]);
-        wrapper.appendChild(mainLi[i]);
-        mainLi[i].parentNode.href = "/fx_coating_site/dist" + aValue;
-      }
-    } else {
-      for (var i = 0; i < mainLi.length; i++) {
-        mainLi[i].addEventListener("click", scrollTo, false);
-      }
-    }
-  });
+  // console.log("SEAF Fired");
 
   // Variables
   var hamburg = document.querySelector(".hamburg");
@@ -54,6 +31,30 @@
   var form = document.querySelector("#quoteForm");
   var alert = document.querySelector(".alert");
 
+  window.addEventListener("load", function() {
+    var urlCheck = window.location.href;
+    var replace = urlCheck.replace("www.", "");
+    var urlParam = replace.slice(20);
+    if (
+      urlParam == "agricultural" ||
+      urlParam == "commercial" ||
+      urlParam == "industrial"
+    ) {
+      for (var i = 0; i < mainLi.length; i++) {
+        var aValue = "#" + mainLi[i].innerHTML.toLowerCase();
+        var parent = mainLi[i].parentNode;
+        var wrapper = document.createElement("a");
+        // console.log(aValue);
+        parent.replaceChild(wrapper, mainLi[i]);
+        wrapper.appendChild(mainLi[i]);
+        mainLi[i].parentNode.href = "http://www.fxcoating.ca/" + aValue;
+      }
+    } else {
+      for (var i = 0; i < mainLi.length; i++) {
+        mainLi[i].addEventListener("click", scrollTo, false);
+      }
+    }
+  });
   //Ajax Functions
   if (window.XMLHttpRequest) {
     request = new XMLHttpRequest();
@@ -82,7 +83,7 @@
       thisform.elements.location.value +
       "&overview=" +
       thisform.elements.overview.value;
-    console.log(formdata);
+    // console.log(formdata);
 
     var url = "./send.php";
     request.onreadystatechange = formSubmitted;
@@ -95,7 +96,6 @@
   }
 
   function formSubmitted() {
-    console.log("hi");
     if (request.readyState === 4 || request.readyState === "complete") {
       if (
         request.responseText == "Please use a valid email" ||
@@ -107,16 +107,14 @@
         alert.style.color = "white";
         alert.style.height = "auto";
         alert.style.padding = "10px";
-        console.log(request.responseText);
+        // console.log(request.responseText);
         alert.style.opacity = "1";
       } else if (request.responseText == "Your email has been sent") {
         alert.innerHTML = request.responseText;
         alert.style.backgroundColor = "white";
-        alert.style.border = "1px solid #90BBB4";
-        alert.style.color = "#90BBB4";
-        alert.style.opacity = "1";
-      } else {
-        console.log(request.responseText);
+        alert.style.color = "#0f3748";
+        alert.style.height = "auto";
+        alert.style.padding = "10px";
       }
     }
   }
@@ -132,7 +130,7 @@
 
   function scrollTo(e) {
     var aValue = "#" + e.srcElement.innerHTML.toLowerCase();
-    console.log(aValue);
+    // console.log(aValue);
     TweenLite.to(window, 1.5, {
       scrollTo: aValue,
       ease: Power2.easeOut
@@ -169,7 +167,7 @@
       galleryPos = galleryInfo.length;
     }
     galleryPos--;
-    console.log(galleryPos);
+    // console.log(galleryPos);
     TweenLite.to([galleryImg, gallDesc], 0.4, {
       opacity: 0,
       onComplete: fadeImg
@@ -178,16 +176,19 @@
 
   // Event Listeners
   hamburg.addEventListener("click", slideMenu, false);
-  right.addEventListener("click", moveForward, false);
-  left.addEventListener("click", moveBack, false);
-  form.addEventListener("submit", regForm, false);
-  form.addEventListener(
-    "keyup",
-    function() {
-      alert.style.height = "0";
-      alert.style.padding = "0";
-      alert.innerHTML = "";
-    },
-    false
-  );
+  if (right) {
+    right.addEventListener("click", moveForward, false);
+    left.addEventListener("click", moveBack, false);
+    form.addEventListener("submit", regForm, false);
+    form.addEventListener(
+      "keyup",
+      function() {
+        alert.style.height = "0";
+        alert.style.padding = "0";
+        alert.innerHTML = "";
+        alert.style.backgroundColor = "#0f3748";
+      },
+      false
+    );
+  }
 })();

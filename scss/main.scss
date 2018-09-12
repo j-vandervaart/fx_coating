@@ -122,15 +122,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: "Alte Hass Grotesk Bold";
+  src: url("../fonts/altehaasgroteskbold-webfont.woff2") format("woff2"),
+    url("../fonts/altehaasgroteskbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alte Hass Grotesk";
+  src: url("../fonts/altehaasgroteskregular-webfont.woff2") format("woff2"),
+    url("../fonts/altehaasgroteskregular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 $mainColour: #0f3748;
 $offWhite: #e6e6e6;
 
-$mainFont: "Roboto";
+$mainFont: "Roboto", sans-serif;
+$headerFont: "Alte Hass Grotesk", sans-serif;
+$headerFontBold: "Alte Hass Grotesk Bold", sans-serif;
 
 $ipad: 768px;
 $ipadPro: 1024px;
 $desktopStart: 1025px;
+$highRes: 1920px;
+$iMac: 2400px;
 
 body {
   width: 100vw;
@@ -167,11 +185,13 @@ a {
     width: 70%;
   }
 }
+.none {
+  display: none;
+}
 .mainHdg {
-  font-family: "Alte Haas Grotesk";
+  font-family: $headerFont;
   color: $mainColour;
   text-transform: uppercase;
-  font-weight: 400;
   font-size: 28px;
   padding-top: 6vh;
   line-height: 36px;
@@ -181,15 +201,30 @@ a {
   @media screen and (min-width: $desktopStart) {
     padding-top: 8vh;
   }
+  @media screen and (min-width: $highRes) {
+    font-size: 42px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 56px;
+  }
 }
 .mainHdg span {
-  font-weight: 800;
+  font-family: $headerFontBold;
 }
 .mainP {
   font-family: $mainFont;
   font-size: 16px;
   margin-top: 2vh;
   line-height: 30px;
+  font-weight: 300;
+  @media screen and (min-width: $highRes) {
+    font-size: 20px;
+    line-height: 34px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 28px;
+    line-height: 44px;
+  }
 }
 #navBar {
   box-sizing: border-box;
@@ -210,6 +245,12 @@ a {
   @media screen and (min-width: $desktopStart) {
     margin-left: 15%;
   }
+  @media screen and (min-width: $highRes) {
+    height: 60px;
+  }
+  @media screen and (min-width: $iMac) {
+    height: 80px;
+  }
 }
 #callInfo {
   display: none;
@@ -224,12 +265,26 @@ a {
   font-size: 18px;
   color: #000;
   margin-bottom: 5px;
+  @media screen and (min-width: $highRes) {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
 }
 #callInfo #number {
-  font-family: "Segoe UI";
+  font-family: $mainFont;
   color: $mainColour;
   font-size: 28px;
   font-weight: 700;
+  @media screen and (min-width: $highRes) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 40px;
+  }
 }
 .hamburg {
   position: fixed;
@@ -359,12 +414,15 @@ a {
     padding: 0;
     font-size: 14px;
   }
+  @media screen and (min-width: $highRes) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 26px;
+  }
 }
 .mainLi:hover {
   color: #acacac;
-}
-.mainLi:last-child {
-  border-bottom: none;
 }
 #secondaryUl {
   box-sizing: border-box;
@@ -415,6 +473,12 @@ a {
   @media screen and (min-width: $desktopStart) {
     height: 83vh;
   }
+  @media screen and (min-width: $highRes) {
+    min-height: 800px;
+  }
+  @media screen and (min-width: $iMac) {
+    min-height: 1000px;
+  }
 }
 #protectDiv {
   width: 90%;
@@ -434,12 +498,19 @@ a {
     padding: 2%;
     min-height: 500px;
   }
+  @media screen and (min-width: $highRes) {
+    min-height: 700px;
+    width: 650px;
+  }
+  @media screen and (min-width: $iMac) {
+    min-height: 900px;
+    width: 850px;
+  }
 }
 #protectDiv h1 {
   width: 60%;
   text-transform: uppercase;
-  font-family: "Alte Haas Grotesk";
-  font-weight: 800;
+  font-family: $headerFontBold;
   color: #fff;
   font-size: 40px;
   line-height: 50px;
@@ -452,10 +523,17 @@ a {
     font-size: 45px;
     line-height: 55px;
   }
+  @media screen and (min-width: $highRes) {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 75px;
+    line-height: 90px;
+  }
 }
 #protectDiv span {
   text-transform: lowercase;
-  font-weight: 400;
 }
 #protectDiv h2 {
   color: #fff;
@@ -472,6 +550,14 @@ a {
     line-height: 40px;
     font-size: 20px;
     width: 100%;
+  }
+  @media screen and (min-width: $highRes) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 42px;
+    line-height: 54px;
   }
 }
 #protectDiv p {
@@ -493,6 +579,13 @@ a {
     margin-top: 15px;
     line-height: 35px;
     font-size: 16px;
+  }
+  @media screen and (min-width: $highRes) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 30px;
+    line-height: 45px;
   }
 }
 #about {
@@ -530,8 +623,14 @@ a {
   padding-right: 8%;
   text-transform: uppercase;
   font-size: 24px;
+  @media screen and (min-width: $highRes) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 46px;
+  }
 }
-#about #polygonP {
+#about .polygonP {
   color: #fff;
   font-family: $mainFont;
   position: absolute;
@@ -539,6 +638,18 @@ a {
   padding-left: 8%;
   padding-right: 8%;
   line-height: 30px;
+  font-size: 16px;
+  @media screen and (min-width: $ipad) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: $highRes) {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 34px;
+    line-height: 52px;
+  }
 }
 #about hr {
   border: 0;
@@ -553,6 +664,13 @@ a {
   font-size: 24px;
   margin-top: 3vh;
   line-height: 36px;
+  @media screen and (min-width: $highRes) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
 }
 #products {
   background-color: #fff;
@@ -593,12 +711,18 @@ a {
   }
 }
 #evaluation h3 {
-  font-family: "Alte Haas Grotesk";
+  font-family: $headerFont;
   color: $mainColour;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.05rem;
   margin-top: 3vh;
+  @media screen and (min-width: $highRes) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
 }
 #applications {
   background-color: #fff;
@@ -627,6 +751,7 @@ a {
   @media screen and (min-width: $ipad) {
     flex-grow: 1;
     height: auto;
+    min-height: 250px;
   }
 }
 #appsCom {
@@ -642,6 +767,7 @@ a {
   min-height: 160px;
   @media screen and (min-width: $ipad) {
     height: 18vh;
+    min-height: 250px;
   }
   @media screen and (min-width: $desktopStart) {
     height: 33vh;
@@ -683,8 +809,16 @@ a {
   @media screen and (min-width: $desktopStart) {
     width: 60%;
   }
+  @media screen and (min-width: $highRes) {
+    font-size: 28px;
+    padding: 20px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
 }
 #gallery {
+  display: none;
   background-color: #fff;
   padding-bottom: 6vh;
   @media screen and (min-width: $desktopStart) {
@@ -724,6 +858,9 @@ a {
   width: auto;
   height: 80px;
   transition: height 0.6s ease;
+  @media screen and (min-width: $highRes) {
+    height: 120px;
+  }
 }
 #gallDesc {
   width: 100%;
@@ -732,6 +869,7 @@ a {
   height: 90px;
 }
 #quote {
+  padding-top: 6vh;
   background-color: #fff;
   padding-bottom: 6vh;
 }
@@ -750,10 +888,15 @@ a {
 }
 #quote h1 {
   width: 100%;
-  font-family: "Alte Haas Grotesk";
+  font-family: $headerFont;
   color: #e3e3e3;
-  font-weight: 400;
   font-size: 28px;
+  @media screen and (min-width: $highRes) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 44px;
+  }
 }
 #quote hr {
   width: 100%;
@@ -783,12 +926,20 @@ form {
 }
 label {
   display: block;
-  font-family: "Roboto";
+  font-family: $mainFont;
   font-size: 16px;
   color: #e3e3e3;
   text-transform: uppercase;
   margin-top: 25px;
   margin-bottom: 12px;
+  @media screen and (min-width: $highRes) {
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 22px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 26px;
+  }
 }
 input[type="text"] {
   display: block;
@@ -798,23 +949,33 @@ input[type="text"] {
   border: none;
 }
 textarea {
-  width: 99%; // min-height: 200px;
+  width: 99%;
+  // min-height: 200px;
   background-color: #e3e3e3;
   border: none;
-  flex-grow: 1;
-  height: auto;
+  height: 150px;
+  @media screen and (min-width: $ipad) {
+    flex-grow: 1;
+    height: auto;
+  }
 }
 input[type="submit"] {
   display: block;
   width: 100%;
   background-color: #898989;
-  height: 30px;
   border: none;
   font-family: $mainFont;
   text-transform: uppercase;
   margin-top: 25px;
   font-size: 17px;
   transition: background-color 0.6s ease, color 0.6s ease;
+  padding: 10px;
+  @media screen and (min-width: $highRes) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 28px;
+  }
 }
 input[type="submit"]:hover {
   background-color: #000;
@@ -835,38 +996,157 @@ input[type="submit"]:hover {
 .contentBreakdown {
   width: 45%;
   margin: 20px auto;
+  @media screen and (min-width: $highRes) {
+    margin: 40px auto;
+  }
 }
 .contentBreakdown h4 {
   font-family: $mainFont;
   text-transform: uppercase;
   margin-bottom: 10px;
+  @media screen and (min-width: $highRes) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
 }
 .contentBreakdown p {
   font-family: $mainFont;
   text-transform: uppercase;
   color: $mainColour;
   font-weight: 500;
+  @media screen and (min-width: $highRes) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
 }
 .contentBreakdown a {
   font-family: $mainFont;
   color: $mainColour;
   font-weight: 500;
   text-decoration: underline;
+  @media screen and (min-width: $highRes) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
 }
 #map {
   width: 100%;
   height: 400px;
   margin-top: 20px;
   margin-bottom: 6vh;
+  @media screen and (min-width: $desktopStart) {
+    height: 450px;
+  }
+  @media screen and (min-width: $iMac) {
+    height: 700px;
+  }
 }
 .firstHeading {
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 5px;
+  @media screen and (min-width: $highRes) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
+}
+#bodyContent p {
+  @media screen and (min-width: $highRes) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 26px;
+  }
 }
 .alert {
   padding: 0;
   font-family: $mainFont;
   height: 0;
   transition: all 1s ease;
+}
+.subHr {
+  border: 0;
+  height: 1px;
+  background-color: $mainColour;
+  opacity: 0.2;
+  margin-top: 3vh;
+}
+.subHdg {
+  font-family: $headerFontBold;
+  color: $mainColour;
+  font-size: 24px;
+  margin-top: 3vh;
+  line-height: 30px;
+  @media screen and (min-width: $highRes) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
+}
+.subHdgClose {
+  font-family: $mainFont;
+  color: $mainColour;
+  font-size: 24px;
+  margin-top: 3vh;
+  line-height: 40px;
+  @media screen and (min-width: $highRes) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 36px;
+  }
+}
+.appBreakdown {
+  padding-bottom: 6vh;
+}
+footer {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer h3 {
+  color: #898989;
+  font-family: $mainFont;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 20px;
+}
+footer p {
+  color: #898989;
+  font-family: $mainFont;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  font-size: 13px;
+  line-height: 25px;
+}
+footer a {
+  text-decoration: underline;
+  color: #898989;
+}
+.appBreakdown ul {
+  list-style-type: square;
+  list-style-position: inside;
+  color: red;
+}
+.appBreakdown li {
+  font-family: $mainFont;
+  font-size: 16px;
+  margin-top: 15px;
+  line-height: 30px;
+  color: $mainColour;
+  font-weight: 600;
 }

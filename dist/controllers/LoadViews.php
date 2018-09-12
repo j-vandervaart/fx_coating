@@ -13,10 +13,7 @@ class LoadViews {
             // header('Location: ');
             require_once('views/home.php');
         }
-
         require_once('views/footer.php');
-
-
     }
 
 }
