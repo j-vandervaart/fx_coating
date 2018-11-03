@@ -1,30 +1,41 @@
 <section id="home">
     <h1 class="none">Home</h1>
     <div id="protectDiv">
-        <h1>Protect <span>and</span> Beautify.</h1>
-        <h2>FX Coating Systems protect and beautify a wide range of agricultural, commercial, and industrial surfaces with advanced coating options. </h2>
-        <p id="desktopP">Floors and surfaces are subject to just about every kind of abuse – impact, abrasions, stains, chemical attacks, warping, temperature fluctuations. As such, it’s critical to protect these surfaces using specially designed coatings.
+        <h1><span>Discover how FX can make life easier</span></h1>
+        <ul>
+            <div><img src="./images/arrow.svg" alt=""><li>For <a href="/agricultural">FARMERS</a></li>
+            </div>
+            <div>
+            <img src="./images/arrow.svg" alt=""><li>For <a href="/commercial">CONTRACTORS</a></li>
+            </div>
+            <div>
+            <img src="./images/arrow.svg" alt=""><li>
+            For <a href="/industrial">FACILITY OWNERS AND <br>MAINTENANCE MANAGERS</a></li>
+            </div>
+        </ul>
+        <!-- <h2>FX Coating Systems protect and beautify a wide range of agricultural, commercial, and industrial surfaces with advanced coating options. </h2>
+        <p id="desktopP">Floors and surfaces are subject to just about every kind of abuse – impact, abrasions, stains, chemical attacks, warping, temperature fluctuations. As such, it’s critical to protect these surfaces using specially designed coatings. -->
 </p>
     </div>
 </section>
 <section id="about">
     <div class="container">
-        <h1 class="mainHdg"><span>About</span> Our Coatings</h1>
-        <p class="mainP">Whether you’re worried about fissures on the floor of a manufacturing facility, or concerned about wear and tear on your agricultural equipment, you can count on FX Coating to provide you with exceptional coating solutions.</p>
+        <h1 class="mainHdg" id="callToAction">Could FX problem-solving be the solution for you?</h1>
+        <p class="mainP">We are turn-key coating specialists incorporating advancing nanotechnology in everyday commercialized solutions.</p>
         <hr>
         <p id="leader">A leader in industrial and agricultural coatings, FX Coating proudly offers solutions that are:</p>    
         <div id="polygonMain">
-            <div class="polygonInd">
+            <!-- <div class="polygonInd">
                 <picture>
                     <source media="(min-width: 1024px)" srcset="./images/chain_desk.png">
                     <img src="./images/chain_mobile.png" alt="Durable">
                 </picture>
                 <h2>Durable</h2>
                 <p class="polygonP">Durable even in industrial, warehouse, and manufacturing settings.</p>
-            </div>
-            <div class="polygonInd">
+            </div> -->
+            <div class="polygonInd" id="fullStretch">
                 <picture>
-                    <source media="(min-width: 1024px)" srcset="./images/hardhat_desk.png">
+                    <source media="(min-width: 1024px)" srcset="./images/hardhat_desk1.png">
                     <img src="./images/hardhat_mobile.png" alt="Safe">
                 </picture>
                 <h2>Safe</h2>
@@ -108,7 +119,7 @@
         </div>
     </div>
 </section>
-<section id="quote">
+<section id="get-a-quote">
     <div class="container">
         <div id="quoteDiv">
             <h1>Get a Quote.</h1>
@@ -134,66 +145,6 @@
                     <input name="submit" type="submit" value="Submit">
                 </div>
 		    </form>
-        </div>
-    </div>
-</section>
-<section id="contact">
-    <div class="container">
-        <h1 class="mainHdg"><span>Contact</span> Us</h1>
-        <div id="contactInfo">
-            <div id="contactType">
-                <div class="contentBreakdown">
-                    <h4>Phone:</h4>
-                    <p>519.828.3783</p>
-                </div>
-                <div class="contentBreakdown">
-                    <h4>TOLL FREE:</h4>
-                    <p>1.888.828.3783</p>
-                </div>
-                <div class="contentBreakdown">
-                    <h4>Cell:</h4>
-                    <p>519.630.3639</p>
-                </div>
-                <div class="contentBreakdown">
-                    <h4>Email:</h4>
-                    <a href="mailto:rick@fxcoating.ca?Subject=Website%20Inquiry" target="_top">rick@fxcoating.ca</a>
-                </div>
-            </div>
-
-            <div id="map"></div>
-                <script>
-                var map;
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 43.00717048507984, lng:-81.81145445602745},
-                    zoom: 9
-                    });
-
-                    var contentString = '<div id="content">'+
-                    '<div id="siteNotice">'+
-                    '</div>'+
-                    '<h1 id="firstHeading" class="firstHeading">6264 Wisbeach Rd.</h1>'+
-                    '<div id="bodyContent">'+
-                    '<p>6264 Wisbeach Rd, Watford, ON N0M 2S0</p>'+
-                    '</div>'+
-                    '</div>';
-
-                var infowindow = new google.maps.InfoWindow({
-                    content: contentString
-                });
-
-                var marker = new google.maps.Marker({
-                    position: {lat: 43.00717048507984, lng:-81.81145445602745},
-                    map: map,
-                    title: '6264 Wisbeach Rd, Watford, ON N0M 2S0'
-                });
-                window.addEventListener('load', function() {
-                    infowindow.open(map, marker);
-                });
-                }
-                </script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4XMMKia7dVi2UNNqfwaMtEafE7w6_nbU&callback=initMap"
-                async defer></script>
         </div>
     </div>
 </section>

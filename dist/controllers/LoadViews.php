@@ -7,7 +7,7 @@ class LoadViews {
         require_once('views/head.php');
         require_once('views/nav.php');
 
-        if(isset($_GET['pg']) && ($_GET['pg'] == 'agricultural' || $_GET['pg'] == 'industrial' || $_GET['pg'] == 'commercial')) {
+        if(isset($_GET['pg']) && ($_GET['pg'] == 'agricultural' || $_GET['pg'] == 'industrial' || $_GET['pg'] == 'commercial' || $_GET['pg'] == 'contact')) {
             require_once('views/'.$_GET['pg'].'.php');
         }else {
             // header('Location: ');

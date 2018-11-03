@@ -211,6 +211,10 @@ a {
 .mainHdg span {
   font-family: $headerFontBold;
 }
+#callToAction {
+  font-family: $mainFont;
+  text-transform: none;
+}
 .mainP {
   font-family: $mainFont;
   font-size: 16px;
@@ -237,7 +241,7 @@ a {
 #logoImg {
   display: block;
   width: auto;
-  height: 45px;
+  height: 60px;
   margin-left: 5%;
   @media screen and (min-width: $ipadPro) {
     margin-left: 10%;
@@ -246,7 +250,7 @@ a {
     margin-left: 15%;
   }
   @media screen and (min-width: $highRes) {
-    height: 60px;
+    height: 80px;
   }
   @media screen and (min-width: $iMac) {
     height: 80px;
@@ -402,7 +406,7 @@ a {
   color: $offWhite;
   font-size: 20px;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: rgba(112, 112, 112, 0.5) 1px solid;
   transition: color 0.6s ease;
   cursor: pointer;
@@ -419,6 +423,22 @@ a {
   }
   @media screen and (min-width: $iMac) {
     font-size: 26px;
+  }
+}
+#lastLink {
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+  @media screen and (min-width: $ipad) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $desktopStart) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: $highRes) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $iMac) {
+    font-size: 28px;
   }
 }
 .mainLi:hover {
@@ -488,6 +508,7 @@ a {
   min-height: 470px;
   box-sizing: border-box;
   padding: 5%;
+  // border: white solid 2px;
   @media screen and (min-width: $ipadPro) {
     width: 80%;
   }
@@ -508,18 +529,19 @@ a {
   }
 }
 #protectDiv h1 {
-  width: 60%;
+  width: 90%;
   text-transform: uppercase;
   font-family: $headerFontBold;
   color: #fff;
   font-size: 40px;
   line-height: 50px;
+  margin-left: 5%;
   @media screen and (min-width: $ipadPro) {
     font-size: 60px;
     line-height: 70px;
   }
   @media screen and (min-width: $desktopStart) {
-    width: 40%;
+    width: 90%;
     font-size: 45px;
     line-height: 55px;
   }
@@ -533,7 +555,7 @@ a {
   }
 }
 #protectDiv span {
-  text-transform: lowercase;
+  text-transform: none;
 }
 #protectDiv h2 {
   color: #fff;
@@ -559,6 +581,31 @@ a {
     font-size: 42px;
     line-height: 54px;
   }
+}
+#protectDiv div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+#protectDiv li {
+  width: 85%;
+  font-family: $mainFont;
+  // margin-top: 3vh;
+  color: white;
+  font-size: 20px;
+  line-height: 35px;
+}
+#protectDiv a {
+  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+}
+#protectDiv img {
+  display: block;
+  width: 15%;
+  height: 15px;
+  margin-top: 9px;
 }
 #protectDiv p {
   display: none;
@@ -603,6 +650,19 @@ a {
   position: relative;
   @media screen and (min-width: $ipad) {
     width: 49%;
+  }
+}
+#about #fullStretch {
+  width: 100%;
+}
+#about #fullStretch h2 {
+  @media screen and (min-width: $ipad) {
+    padding-left: 4%;
+  }
+}
+#about #fullStretch p {
+  @media screen and (min-width: $ipad) {
+    padding-left: 4%;
   }
 }
 #about picture {
@@ -868,7 +928,7 @@ a {
 .gallButton:hover {
   height: 90px;
 }
-#quote {
+#get-a-quote {
   padding-top: 6vh;
   background-color: #fff;
   padding-bottom: 6vh;
@@ -886,7 +946,7 @@ a {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f2027', endColorstr='#0f3748',GradientType=1 );
 }
-#quote h1 {
+#get-a-quote h1 {
   width: 100%;
   font-family: $headerFont;
   color: #e3e3e3;
@@ -898,7 +958,7 @@ a {
     font-size: 44px;
   }
 }
-#quote hr {
+#get-a-quote hr {
   width: 100%;
   border: 0;
   height: 1px;

@@ -2,7 +2,7 @@
     <img src="./images/logo.png" alt="FX Coating Logo" id="logoImg">
     <div id="callInfo">
         <p id="call">Call us today!</p>
-        <p id="number">1.888.828.3780</p>
+        <p id="number">1.888.828.3783</p>
     </div>
     <div class="hamburg">
         <div class="hamburgBlock"></div>
@@ -22,7 +22,9 @@
             <a href="/commercial"><li class="secondaryLi">Commercial</li></a>
             <a href="/industrial"><li class="secondaryLi">Industrial</li></a>
         </ul>
+        
         <li class="mainLi">Gallery</li>
-        <li class="mainLi">Contact</li>
+        <a href="/contact"><li class="mainLi">Contact</li></a>
+        <li id="lastLink" class="mainLi">Get-a-Quote</li>
     </ul>
 </nav>

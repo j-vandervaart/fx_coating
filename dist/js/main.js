@@ -38,7 +38,8 @@
     if (
       urlParam == "agricultural" ||
       urlParam == "commercial" ||
-      urlParam == "industrial"
+      urlParam == "industrial" ||
+      urlParam == "contact"
     ) {
       for (var i = 0; i < mainLi.length; i++) {
         var aValue = "#" + mainLi[i].innerHTML.toLowerCase();
